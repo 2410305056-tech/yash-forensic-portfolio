@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
+import Education from './components/Education'
 import CrimeScene3DSection from './components/CrimeScene3DSection'
 import ExperienceTimeline from './components/ExperienceTimeline'
 import SkillsGrid from './components/SkillsGrid'
 import Projects from './components/Projects'
+import Certifications from './components/Certifications'
 import MethodDiscipline from './components/MethodDiscipline'
 import CareerPathway from './components/CareerPathway'
 import Contact from './components/Contact'
@@ -17,7 +20,7 @@ export default function App() {
   const [showToast, setShowToast] = useState(true)
 
   useEffect(() => {
-    const sectionIds = ['hero', 'crime-scene', 'experience', 'skills', 'projects', 'method', 'pathway', 'contact']
+    const sectionIds = ['hero', 'about', 'education', 'crime-scene', 'experience', 'skills', 'projects', 'certifications', 'method', 'pathway', 'contact']
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 250
@@ -74,10 +77,13 @@ export default function App() {
 
       <main>
         <Hero />
-        <CrimeScene3DSection uvMode={uvMode} />
-        <ExperienceTimeline />
+        <About />
+        <Education />
         <SkillsGrid />
         <Projects />
+        <Certifications />
+        <CrimeScene3DSection uvMode={uvMode} />
+        <ExperienceTimeline />
         <MethodDiscipline />
         <CareerPathway />
         <Contact />

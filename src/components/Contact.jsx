@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Linkedin, MapPin, Send, CheckCircle2, Copy, Phone } from 'lucide-react'
+import { Mail, Linkedin, Github, MapPin, Send, CheckCircle2, Copy, Phone } from 'lucide-react'
 import { profile } from '../data/profile'
 
 export default function Contact() {
@@ -80,6 +80,30 @@ export default function Contact() {
               </div>
             </div>
 
+            {profile.github ? (
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-panel p-6 rounded-2xl glass-panel-hover border border-uv-glow/30 block group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-uv-glow/10 border border-uv-glow/40 text-uv-glow shrink-0">
+                    <Github className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className="block text-[10px] font-mono text-uv-glow uppercase tracking-wider mb-1">
+                      GitHub
+                    </span>
+                    <p className="text-base font-bold font-display text-slate-100 group-hover:text-cyan-accent transition-colors">
+                      github.com/2410305056-tech
+                    </p>
+                    <p className="text-xs text-slate-400 font-mono mt-1">Open repositories</p>
+                  </div>
+                </div>
+              </a>
+            ) : null}
+
             {profile.linkedin ? (
               <a
                 href={profile.linkedin}
@@ -102,26 +126,7 @@ export default function Contact() {
                   </div>
                 </div>
               </a>
-            ) : (
-              <div className="glass-panel p-6 rounded-2xl border border-slate-800 opacity-80">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-navy-800 border border-slate-700 text-slate-400 shrink-0">
-                    <Linkedin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <span className="block text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-1">
-                      LinkedIn
-                    </span>
-                    <p className="text-sm font-bold font-display text-slate-300">
-                      Profile URL not added yet
-                    </p>
-                    <p className="text-xs text-slate-500 font-mono mt-1">
-                      Send your LinkedIn link to have it published here
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
+            ) : null}
 
             {profile.phone ? (
               <div className="glass-panel p-6 rounded-2xl border border-slate-800">

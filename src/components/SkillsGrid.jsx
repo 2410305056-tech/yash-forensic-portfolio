@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Fingerprint, TestTube2, Scale, Microscope, Sparkles, CheckCircle2 } from 'lucide-react'
+import { Fingerprint, TestTube2, Scale, Microscope, Code2, Sparkles, CheckCircle2 } from 'lucide-react'
 import { skillCategories } from '../data/profile'
 
-const ICONS = { Fingerprint, TestTube2, Scale, Microscope }
+const ICONS = { Fingerprint, TestTube2, Scale, Microscope, Code2 }
 
 const levelStyle = {
   Course: 'bg-slate-700 text-slate-200',

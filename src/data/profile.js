@@ -16,7 +16,7 @@ export const profile = {
   // --- YOU MUST PROVIDE THESE (leave empty until real) ---
   linkedin: '', // full URL, e.g. https://www.linkedin.com/in/your-handle
   phone: '', // e.g. +91 XXXXXXXXXX
-  github: '',
+  github: 'https://github.com/2410305056-tech',
   resumeUrl: '', // /resume.pdf after you add the file to /public
   photoUrl: '',
   enrollmentId: '', // shown as ID only — never as "verified"
@@ -38,11 +38,60 @@ export const profile = {
 
   stats: [
     { value: '2', label: 'Internships' },
-    { value: '3', label: 'Academic projects' },
+    { value: '4', label: 'Featured projects' },
     { value: '2nd Yr', label: 'Geeta University' },
-    { value: 'Trainee', label: 'Not a case officer' },
+    { value: 'Trainee', label: 'Forensic Science' },
+  ],
+
+  about: [
+    'I am Yash Siwach, a B.Sc. Forensic Science student at Geeta University, Panipat. I am training in laboratory methods, evidence handling, and the Indian criminal-law framework that governs scientific reports (BSA, BNSS, and BNS).',
+    'My academic focus is physical and chemical forensics (fingerprints, toxicology screening, documentation) together with digital-evidence integrity — hashing, chain of custody, and honest limitations. I build this as a student trainee, not as a reporting officer.',
+    'Outside the lab I design and code web projects, including this responsive portfolio (React, Vite, Three.js). I am looking for supervised internships and academic collaboration.',
   ],
 }
+
+export const education = [
+  {
+    id: 'bsc',
+    program: 'B.Sc. Forensic Science',
+    institution: 'Geeta University, Panipat, Haryana',
+    period: 'Currently 2nd Year',
+    status: 'Pursuing',
+    points: [
+      'Department of Forensic Science — laboratory practicals and theory',
+      'Core areas: dactyloscopy, forensic chemistry/toxicology, crime-scene protocols, Indian evidence law',
+      'Training emphasis: chain of custody, screening vs confirmatory methods, BSA 2023 / BNSS 2023 / BNS 2023',
+    ],
+  },
+]
+
+export const certifications = [
+  {
+    id: 'intern-lab',
+    kind: 'Achievement',
+    title: 'Forensic laboratory intern (trainee)',
+    issuer: 'Supervised placement — organisation name on certificate pending',
+    period: 'June 2024 – August 2024',
+    detail: 'Assisted with latent fingerprint development, observed UV-Vis screening, and practised evidence packaging under supervision.',
+  },
+  {
+    id: 'intern-legal',
+    kind: 'Achievement',
+    title: 'Legal & forensic documentation intern (trainee)',
+    issuer: 'Academic / legal documentation placement — organisation name pending',
+    period: 'January 2024 – March 2024',
+    detail: 'Studied BSA s.39 and s.63 (formerly IEA s.45 and s.65B) and drafted mock expert notes for class exercises — not filed in court.',
+  },
+  {
+    id: 'portfolio',
+    kind: 'Achievement',
+    title: 'Personal 3D forensic portfolio website',
+    issuer: 'Self-built · React, Vite, Three.js · GitHub',
+    period: '2026',
+    detail: 'Responsive public portfolio with working contact, education, skills, projects, and a verifiable SHA-256 training exhibit.',
+    link: 'https://github.com/2410305056-tech/yash-forensic-portfolio',
+  },
+]
 
 export const law = {
   expertOpinion: 'BSA 2023 s.39 (formerly IEA s.45) — expert opinion',
@@ -148,9 +197,43 @@ export const skillCategories = [
       { name: 'Stereomicroscope / ALS', level: 'Lab', detail: 'Fibre and trace observation in class' },
     ],
   },
+  {
+    id: 'technical',
+    title: 'Web & professional skills',
+    icon: 'Code2',
+    accentColor: 'text-cyan-accent',
+    borderColor: 'border-cyan-accent/30',
+    description: 'Technical and workplace skills used to build this site and document laboratory work.',
+    skills: [
+      { name: 'HTML, CSS, JavaScript, React', level: 'Lab', detail: 'This portfolio: Vite, React 18, Tailwind CSS' },
+      { name: 'Git & GitHub', level: 'Lab', detail: 'Public repositories and version control' },
+      { name: 'Three.js / WebGL (learning)', level: 'Lab', detail: 'Interactive 3D training-lab visualisation' },
+      { name: 'Scientific documentation', level: 'Lab', detail: 'Lab notes, structured reports, professional email' },
+    ],
+  },
 ]
 
 export const projectsList = [
+  {
+    id: 'portfolio-site',
+    title: 'Personal portfolio website (this site)',
+    category: 'Web development · assignment project',
+    academicInstitution: 'Built by Yash Siwach',
+    year: '2026',
+    summary:
+      'Responsive personal portfolio introducing my education, skills, forensic academic projects, achievements, and contact details. Includes an educational 3D training-lab demo. Not a real casefile.',
+    fullMethodology: `1. Planned required sections: About, Education, Skills, Projects, Certifications/Achievements, Contact.
+2. Implemented with React 18, Vite, Tailwind CSS, and React Three Fiber.
+3. Made the layout responsive for mobile and desktop; navigation and mailto contact are functional.
+4. Published source on GitHub for version control and deployment on Vercel.`,
+    keyFindings: [
+      'Single-page site with working in-page navigation and a real email contact path.',
+      'GitHub: https://github.com/2410305056-tech/yash-forensic-portfolio',
+    ],
+    tools: ['React', 'Vite', 'Tailwind CSS', 'Three.js'],
+    imageBadge: 'WEB · PORTFOLIO',
+    link: 'https://github.com/2410305056-tech/yash-forensic-portfolio',
+  },
   {
     id: 'nanopowder',
     title: 'Latent fingerprint enhancement using eco-friendly powders (academic)',

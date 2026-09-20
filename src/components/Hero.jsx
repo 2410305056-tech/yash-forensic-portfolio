@@ -100,20 +100,20 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
         >
           <a
-            href="#crime-scene"
+            href="#about"
             className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-display font-bold text-sm bg-gradient-to-r from-cyan-accent via-cyan-glow to-cyan-dim text-navy-950 shadow-[0_0_30px_rgba(0,212,255,0.5)] hover:shadow-[0_0_45px_rgba(0,212,255,0.8)] hover:scale-105 transition-all duration-300"
           >
             <Compass className="w-5 h-5" />
-            <span>EXPLORE 3D TRAINING LAB</span>
+            <span>ABOUT ME</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 
           <a
-            href="#experience"
+            href="#projects"
             className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-display font-semibold text-sm bg-navy-800/90 border border-cyan-accent/30 text-slate-200 hover:border-cyan-accent hover:text-cyan-accent hover:bg-navy-800 backdrop-blur-md transition-all duration-300"
           >
             <FileText className="w-4 h-4 text-cyan-accent" />
-            <span>INTERNSHIPS &amp; RESEARCH</span>
+            <span>VIEW PROJECTS</span>
           </a>
         </motion.div>
 

@@ -13,12 +13,11 @@ export default function Navbar({ activeSection, uvMode, toggleUvMode }) {
   }, [])
 
   const navLinks = [
-    { name: '3D Lab', href: '#crime-scene', id: 'crime-scene' },
-    { name: 'Experience', href: '#experience', id: 'experience' },
+    { name: 'About', href: '#about', id: 'about' },
+    { name: 'Education', href: '#education', id: 'education' },
     { name: 'Skills', href: '#skills', id: 'skills' },
     { name: 'Projects', href: '#projects', id: 'projects' },
-    { name: 'Method', href: '#method', id: 'method' },
-    { name: 'Path', href: '#pathway', id: 'pathway' },
+    { name: 'Certificates', href: '#certifications', id: 'certifications' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ]
 
@@ -45,7 +44,7 @@ export default function Navbar({ activeSection, uvMode, toggleUvMode }) {
           </div>
         </a>
 
-        <nav className="hidden md:flex items-center gap-1 bg-navy-900/60 p-1.5 rounded-full border border-slate-800 backdrop-blur-md">
+        <nav className="hidden lg:flex items-center gap-1 bg-navy-900/60 p-1.5 rounded-full border border-slate-800 backdrop-blur-md">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id
             return (
@@ -64,7 +63,7 @@ export default function Navbar({ activeSection, uvMode, toggleUvMode }) {
           })}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggleUvMode}
             title="Toggle UV highlight mode (visual aid)"
@@ -87,7 +86,7 @@ export default function Navbar({ activeSection, uvMode, toggleUvMode }) {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
           <button
             onClick={toggleUvMode}
             className="p-2 rounded-lg bg-navy-800 border border-slate-700 text-cyan-accent"
@@ -106,7 +105,7 @@ export default function Navbar({ activeSection, uvMode, toggleUvMode }) {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-navy-950/95 border-b border-cyan-accent/20 backdrop-blur-xl px-4 pt-3 pb-6">
+        <div className="lg:hidden bg-navy-950/95 border-b border-cyan-accent/20 backdrop-blur-xl px-4 pt-3 pb-6">
           <div className="flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
